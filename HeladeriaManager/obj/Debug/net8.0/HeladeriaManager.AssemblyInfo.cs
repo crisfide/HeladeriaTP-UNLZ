@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("heladeria")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("HeladeriaManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1b702d268a41fb94375a311e6395d4459e5fde3")]
-[assembly: System.Reflection.AssemblyProductAttribute("heladeria")]
-[assembly: System.Reflection.AssemblyTitleAttribute("heladeria")]
+[assembly: System.Reflection.AssemblyProductAttribute("HeladeriaManager")]
+[assembly: System.Reflection.AssemblyTitleAttribute("HeladeriaManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

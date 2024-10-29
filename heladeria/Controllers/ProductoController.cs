@@ -39,39 +39,18 @@ namespace heladeria.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
-            //try
-            //{
-            Producto producto = new Producto()
-            {
-                IdHelado = int.Parse(collection["IdHelado"]),
-                Descripcion = collection["Descripcion"],
-                Kilos = int.Parse(collection["Kilos"]),
-                IdUsuarioAlta = 0,
-                FechaAlta = DateTime.Now
-            };
-                ProductoRepository.Agregar(producto);
-
-                return RedirectToAction(nameof(Index));
-            //}
-            /*catch
-            {
-                return View();
-            }*/
-        }
-
-        // GET: ProductoController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ProductoController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
             try
             {
+                Producto producto = new Producto()
+                {
+                    IdHelado = int.Parse(collection["IdHelado"]),
+                    Descripcion = collection["Descripcion"],
+                    Kilos = int.Parse(collection["Kilos"]),
+                    IdUsuarioAlta = 0,
+                    FechaAlta = DateTime.Now
+                };
+                ProductoRepository.Agregar(producto);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -80,10 +59,42 @@ namespace heladeria.Controllers
             }
         }
 
+        // GET: ProductoController/Edit/5
+        public ActionResult Edit(int id)
+        {
+            var producto = ProductoRepository.ObtenerPorId(id);
+            return View(producto);
+        }
+
+        // POST: ProductoController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, IFormCollection collection)
+        {
+            //try
+            //{
+                Producto producto = new Producto()
+                {
+                    IdHelado = int.Parse(collection["IdHelado"]),
+                    Descripcion = collection["Descripcion"],
+                    Kilos = int.Parse(collection["Kilos"]),
+                    IdUsuarioAlta = 0,
+                    FechaAlta = DateTime.Now
+                };
+                ProductoRepository.Actualizar(producto);
+                return RedirectToAction(nameof(Index));
+            /*}
+            catch
+            {
+                return View();
+            }*/
+        }
+
         // GET: ProductoController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var producto = ProductoRepository.ObtenerPorId(id);
+            return View(producto);
         }
 
         // POST: ProductoController/Delete/5
@@ -93,6 +104,7 @@ namespace heladeria.Controllers
         {
             try
             {
+                ProductoRepository.Eliminar(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

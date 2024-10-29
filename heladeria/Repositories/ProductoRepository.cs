@@ -34,7 +34,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Grupo6.Helado WHERE Id = @Id", new { Id = id });
+                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Grupo6.Helado WHERE IdHelado = @Id", new { Id = id });
             }
         }
 
@@ -51,7 +51,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "UPDATE Productos SET Nombre = @Nombre, Precio = @Precio, Cantidad = @Cantidad WHERE Id = @Id";
+                var sql = "UPDATE Grupo6.Helado SET Descripcion = @Descripcion, Kilos = @Kilos WHERE IdHelado = @IdHelado";
                 db.Execute(sql, producto);
             }
         }
@@ -60,7 +60,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "DELETE FROM Productos WHERE Id = @Id";
+                var sql = "DELETE FROM Grupo6.Helado WHERE IdHelado = @Id";
                 db.Execute(sql, new { Id = id });
             }
         }
