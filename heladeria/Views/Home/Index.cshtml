@@ -2,7 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (Context.User.Identity.IsAuthenticated)
+{
+    <h3>Hola @User.Identity.Name</h3>
+
+    <br />
+
+    <a asp-controller="Login" asp-action="Logout" class="btn btn-outline-danger">Cerrar sesión</a>
+}
+else
+{
+    <h3>Debes iniciar sesion</h3>
+}

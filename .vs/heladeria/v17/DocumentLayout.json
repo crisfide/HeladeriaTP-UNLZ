@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{670DFA42-5B89-4DC6-BE33-B83AC8E07A99}|heladeria\\heladeria.csproj|solutionrelative:heladeria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0EC38A0E-EA9E-4A5B-A53F-FD2EEDD1F7C1}|HeladeriaManager\\HeladeriaManager.csproj|d:\\christian\\documents\\programacion\\00 unlz\\programacion iv\\tp\\heladeria\\heladeria\\heladeriamanager\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EC38A0E-EA9E-4A5B-A53F-FD2EEDD1F7C1}|HeladeriaManager\\HeladeriaManager.csproj|solutionrelative:heladeriamanager\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,11 +74,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "heladeria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "heladeria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T03:21:30.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "heladeria\\Views\\Home\\Index.cshtml",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "heladeria\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T03:09:39.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "heladeria\\Views\\Login\\Index.cshtml",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "heladeria\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T02:18:53.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "heladeria\\Controllers\\LoginController.cs",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "heladeria\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwC4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T02:14:35.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Program.cs",
+              "RelativeDocumentMoniker": "heladeria\\Program.cs",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Program.cs",
+              "RelativeToolTip": "heladeria\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:59:10.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\appsettings.json",
+              "RelativeDocumentMoniker": "heladeria\\appsettings.json",
+              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\appsettings.json",
+              "RelativeToolTip": "heladeria\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T01:52:57.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Producto.cs",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\Producto.cs",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\Producto.cs",
               "RelativeDocumentMoniker": "HeladeriaManager\\Producto.cs",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\Producto.cs",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\Producto.cs",
               "RelativeToolTip": "HeladeriaManager\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,11 +165,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Producto.cs",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Models\\Producto.cs",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Models\\Producto.cs",
               "RelativeDocumentMoniker": "heladeria\\Models\\Producto.cs",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Models\\Producto.cs",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Models\\Producto.cs",
               "RelativeToolTip": "heladeria\\Models\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,76 +178,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Delete.cshtml",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Delete.cshtml",
               "RelativeDocumentMoniker": "heladeria\\Views\\Producto\\Delete.cshtml",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Delete.cshtml",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Delete.cshtml",
               "RelativeToolTip": "heladeria\\Views\\Producto\\Delete.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:20:38.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Index.cshtml",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Index.cshtml",
               "RelativeDocumentMoniker": "heladeria\\Views\\Producto\\Index.cshtml",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Index.cshtml",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Index.cshtml",
               "RelativeToolTip": "heladeria\\Views\\Producto\\Index.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEsAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAABBwEsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:20:28.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Details.cshtml",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Details.cshtml",
               "RelativeDocumentMoniker": "heladeria\\Views\\Producto\\Details.cshtml",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Details.cshtml",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Details.cshtml",
               "RelativeToolTip": "heladeria\\Views\\Producto\\Details.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEUAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAABBwEUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:20:19.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Create.cshtml",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Create.cshtml",
               "RelativeDocumentMoniker": "heladeria\\Views\\Producto\\Create.cshtml",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Create.cshtml",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Create.cshtml",
               "RelativeToolTip": "heladeria\\Views\\Producto\\Create.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:18:03.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Edit.cshtml",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Edit.cshtml",
               "RelativeDocumentMoniker": "heladeria\\Views\\Producto\\Edit.cshtml",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Edit.cshtml",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Views\\Producto\\Edit.cshtml",
               "RelativeToolTip": "heladeria\\Views\\Producto\\Edit.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAIBJwA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:12:38.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "ProductoController.cs",
-              "DocumentMoniker": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\ProductoController.cs",
+              "DocumentMoniker": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\ProductoController.cs",
               "RelativeDocumentMoniker": "heladeria\\Controllers\\ProductoController.cs",
-              "ToolTip": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\ProductoController.cs",
+              "ToolTip": "D:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\Controllers\\ProductoController.cs",
               "RelativeToolTip": "heladeria\\Controllers\\ProductoController.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAADgv0sAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
