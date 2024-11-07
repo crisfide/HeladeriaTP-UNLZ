@@ -10,3 +10,15 @@ d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\helader
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Debug\net8.0\refint\HeladeriaManager.dll
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.pdb
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Debug\net8.0\ref\HeladeriaManager.dll
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.deps.json
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.dll
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.pdb
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.AssemblyInfoInputs.cache
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.AssemblyInfo.cs
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.csproj.CoreCompileInputs.cache
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.sourcelink.json
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.dll
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\refint\HeladeriaManager.dll
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.pdb
+C:\TP_PROGRAMACION4\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\ref\HeladeriaManager.dll

@@ -22,40 +22,40 @@ namespace heladeria.Repositories
 
 
         //PEDIDO
-        public IEnumerable<Producto> ObtenerTodos()
+        public IEnumerable<Pedido> ObtenerTodos()
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Producto>("SELECT * FROM Grupo6.Helado").ToList();
+                return db.Query<Pedido>("SELECT * FROM Pedido").ToList();
             }
         }
 
         //pedido
-        public IEnumerable<Producto> ObtenerPropios(Usuario usuario)
+        public IEnumerable<Pedido> ObtenerPropios(Pedido pedido)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Producto>("SELECT * FROM Grupo6.Pedido WHERE").ToList();
+                return db.Query<Pedido>("SELECT * FROM Grupo6.Pedido WHERE").ToList();
             }
         }
 
         //PEDIDO
-        public Producto ObtenerPorId(int id)
+        public Pedido ObtenerPorId(int id)
         {
             using (var db = new SqlConnection(connectionString))
             {
-                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Grupo6.Helado WHERE IdHelado = @Id", new { Id = id });
+                return db.QueryFirstOrDefault<Pedido>("SELECT * FROM Pedido WHERE IdPedido = @Id", new { Id = id });
             }
         }
 
 
         //PEDIDO
-        public void Agregar(Producto producto)
+        public void Agregar(Pedido pedido)
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Grupo6.Helado (Descripcion, Kilos, IdUsuarioAlta, FechaAlta) VALUES (@Descripcion, @Kilos, @IdUsuarioAlta, @FechaAlta)";
-                db.Execute(sql, producto);
+                var sql = "INSERT INTO Pedido (IdHelado, Kilos, IdPedido, IdUsuarioAlta) VALUES (@IdHelado, @Kilos, @IdPedido, @IdUsuarioAlta)";
+                db.Execute(sql, pedido);
             }
         }
 

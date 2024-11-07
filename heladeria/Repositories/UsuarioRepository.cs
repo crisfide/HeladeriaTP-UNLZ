@@ -22,34 +22,34 @@ namespace heladeria.Repositories
 
 
         //poner usuario
-        public IEnumerable<Producto> ObtenerTodos()
+        public IEnumerable<Usuario> ObtenerTodos()
         {
 
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Producto>("SELECT * FROM Grupo6.Helado").ToList();
+                return db.Query<Usuario>("SELECT * FROM Usuario").ToList();
             }
         }
 
 
         //poner usuario
-        public Producto ObtenerPorId(int id)
+        public Usuario ObtenerPorId(int id)
         {
             using (var db = new SqlConnection(connectionString))
             {
-                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Grupo6.Helado WHERE IdHelado = @Id", new { Id = id });
+                return db.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuario WHERE IdUsuario = @Id", new { Id = id });
             }
         }
 
 
 
         //poner usuario
-        public void Agregar(Producto producto)
+        public void Agregar(Usuario usuario)
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Grupo6.Helado (Descripcion, Kilos, IdUsuarioAlta, FechaAlta) VALUES (@Descripcion, @Kilos, @IdUsuarioAlta, @FechaAlta)";
-                db.Execute(sql, producto);
+                var sql = "INSERT INTO Usuario (NombreUsuario, MailUsuario, IdUsuario, GoogleIdentificador) VALUES (@NombreUsuario, @MailUsuario, @IdUsuario, @GoogleIdentificador)";
+                db.Execute(sql, usuario);
             }
         }
 
