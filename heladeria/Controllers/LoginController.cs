@@ -44,7 +44,7 @@ namespace heladeria.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return View("Index");
+            return RedirectToAction("Index", "Home");
 
         }
     }
