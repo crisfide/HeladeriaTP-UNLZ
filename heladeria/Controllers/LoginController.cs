@@ -35,9 +35,9 @@ namespace heladeria.Controllers
             });
 
             //muestra un JSON con los datos de google
-            //return Json(claims);
+            return Json(claims);
 
-            return RedirectToAction("Index", "Home", new { area = "" });
+            //return RedirectToAction("Index", "Home", new { area = "" });
         }
 
 

@@ -1,0 +1,1 @@
+select * from grupo6.Usuario

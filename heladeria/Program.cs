@@ -27,6 +27,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ProductoRepository>(
         _ => new ProductoRepository(builder.Configuration["Db:ConnectionString"]));
 
+//builder.Services.AddScoped<UsuarioRepository>(
+  //      _ => new UsuarioRepository(builder.Configuration["Db:ConnectionString"]));
 
 //builder.Services.AddScoped<ProductoRepository>(); // registro el repositorio
 

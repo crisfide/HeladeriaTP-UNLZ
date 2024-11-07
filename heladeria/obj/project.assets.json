@@ -2165,6 +2165,16 @@
             "rid": "win"
           }
         }
+      },
+      "HeladeriaManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/HeladeriaManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HeladeriaManager.dll": {}
+        }
       }
     }
   },
@@ -6055,12 +6065,18 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "HeladeriaManager/1.0.0": {
+      "type": "project",
+      "path": "../HeladeriaManager/HeladeriaManager.csproj",
+      "msbuildProject": "../HeladeriaManager/HeladeriaManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Dapper >= 2.1.35",
       "Drapper >= 1.1.0",
+      "HeladeriaManager >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.Google >= 8.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6",
       "System.Data.SqlClient >= 4.8.6"
@@ -6098,7 +6114,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj": {
+              "projectPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

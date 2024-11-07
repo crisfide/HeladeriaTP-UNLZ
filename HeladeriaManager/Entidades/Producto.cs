@@ -1,4 +1,4 @@
-﻿namespace HeladeriaManager
+﻿namespace HeladeriaManager.Entidades
 {
     public class Producto
     {

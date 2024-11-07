@@ -236,3 +236,5 @@ d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\helader
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\heladeria\obj\Debug\net8.0\ref\heladeria.dll
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\heladeria\obj\Debug\net8.0\heladeria.sourcelink.json
 d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\heladeria\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
+d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\heladeria\bin\Debug\net8.0\HeladeriaManager.dll
+d:\Christian\Documents\Programacion\00 UNLZ\Programacion IV\TP\heladeria\heladeria\heladeria\bin\Debug\net8.0\HeladeriaManager.pdb
