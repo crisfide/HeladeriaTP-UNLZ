@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using heladeria.Models;
 
 namespace heladeria.Controllers
 {
@@ -28,16 +29,16 @@ namespace heladeria.Controllers
 
             var claims = result.Principal.Identities.FirstOrDefault().Claims.Select(claim => new
             {
-                claim.Issuer,
-                claim.OriginalIssuer,
-                claim.Type,
+                //claim.Issuer,
+                //claim.OriginalIssuer,
+                //claim.Type,
                 claim.Value
             });
 
             //muestra un JSON con los datos de google
-            return Json(claims);
+            //return Json(claims);
 
-            //return RedirectToAction("Index", "Home", new { area = "" });
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
 
 

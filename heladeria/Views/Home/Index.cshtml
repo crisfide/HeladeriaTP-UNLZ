@@ -5,7 +5,6 @@
 @if (Context.User.Identity.IsAuthenticated)
 {
     <h3>Hola @User.Identity.Name</h3>
-
     <br />
 
     <a asp-controller="Login" asp-action="Logout" class="btn btn-outline-danger">Cerrar sesión</a>

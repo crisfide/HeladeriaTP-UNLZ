@@ -21,7 +21,6 @@ namespace heladeria.Repositories
         }
 
 
-        //poner usuario
         public IEnumerable<Usuario> ObtenerTodos()
         {
 
@@ -32,7 +31,6 @@ namespace heladeria.Repositories
         }
 
 
-        //poner usuario
         public Usuario ObtenerPorId(int id)
         {
             using (var db = new SqlConnection(connectionString))
@@ -41,14 +39,21 @@ namespace heladeria.Repositories
             }
         }
 
+        public Usuario ObtenerPorGoogle(string GId)
+        {
+            using (var db = new SqlConnection(connectionString))
+            {
+                return db.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuario WHERE GoogleIdentificador = @GoogleIdentificador", new { GoogleIdentificador = GId });
+            }
+        }
 
 
-        //poner usuario
+
         public void Agregar(Usuario usuario)
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Usuario (NombreUsuario, MailUsuario, IdUsuario, GoogleIdentificador) VALUES (@NombreUsuario, @MailUsuario, @IdUsuario, @GoogleIdentificador)";
+                var sql = "INSERT INTO Usuario (NombreUsuario, MailUsuario, GoogleIdentificador) VALUES (@NombreUsuario, @MailUsuario, @GoogleIdentificador)";
                 db.Execute(sql, usuario);
             }
         }
