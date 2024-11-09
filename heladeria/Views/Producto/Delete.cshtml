@@ -4,99 +4,69 @@
     ViewData["Title"] = "Eliminar Producto";
 }
 
-<div class="container mt-5">
-    <h1 class="text-center text-danger">Eliminar Producto</h1>
-    <hr />
+<!-- Incluyendo Google Fonts para una tipografía moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <!-- Confirmación de eliminación -->
-            <h3 class="text-warning text-center">¿Está seguro de que desea eliminar este producto?</h3>
-            <dl class="row mt-4">
-                <!-- ID del helado -->
-                <dt class="col-sm-3 font-weight-bold">ID del Producto:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdHelado)</dd>
-
-                <!-- Descripción -->
-                <dt class="col-sm-3 font-weight-bold">Descripción:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
-
-                <!-- Kilos -->
-                <dt class="col-sm-3 font-weight-bold">Cantidad (Kilos):</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.Kilos)</dd>
-
-                <!-- Usuario de Alta -->
-                <dt class="col-sm-3 font-weight-bold">Usuario Alta:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioAlta)</dd>
-
-                <!-- Fecha de Alta -->
-                <dt class="col-sm-3 font-weight-bold">Fecha Alta:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaAlta)</dd>
-
-                <!-- Usuario de Modificación -->
-                <dt class="col-sm-3 font-weight-bold">Usuario Modificación:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioModificacion)</dd>
-
-                <!-- Fecha de Modificación -->
-                <dt class="col-sm-3 font-weight-bold">Fecha Modificación:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaModificacion)</dd>
-
-                <!-- Usuario de Baja -->
-                <dt class="col-sm-3 font-weight-bold">Usuario Baja:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioBaja)</dd>
-
-                <!-- Fecha de Baja -->
-                <dt class="col-sm-3 font-weight-bold">Fecha Baja:</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaBaja)</dd>
-            </dl>
-
-            <!-- Formulario de confirmación de eliminación -->
-            <div class="text-center mt-4">
-                <form asp-action="Delete">
-                    <input type="submit" value="Eliminar" class="btn btn-danger btn-lg" />
-                </form>
-                <br />
-                <a class="btn btn-outline-primary mt-2" asp-action="Index">Volver a la lista</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Estilo personalizado -->
 <style>
+    body {
+        background-color: #f4f3ee;
+        font-family: 'Poppins', sans-serif;
+        color: #4a4a4a;
+    }
+
     .container {
-        background-color: #f8f9fa;
+        background-color: #f9f7f2;
         padding: 30px;
-        border-radius: 10px;
+        border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
     }
 
     h1, h3 {
-        color: #dc3545;
+        color: #6a4e23; /* Marrón oscuro */
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 600;
     }
 
     .font-weight-bold {
         font-weight: 600;
     }
 
-    .btn-outline-primary {
-        border-color: #007bff;
-        color: #007bff;
-    }
-
-    .btn-outline-primary:hover {
-        background-color: #007bff;
+    .btn-danger {
+        background-color: #6a4e23; /* Marrón oscuro */
+        border-color: #6a4e23;
+        font-size: 1.2em;
+        width: 200px;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
         color: white;
     }
 
-    .btn-danger {
-        background-color: #dc3545;
-        border-color: #dc3545;
+        .btn-danger:hover {
+            background-color: #5a3c1d; /* Marrón más oscuro */
+            border-color: #5a3c1d;
+        }
+
+    .btn-outline-primary {
+        color: #6a4e23; /* Marrón oscuro */
+        border-color: #6a4e23;
+        font-weight: 600;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 1.1em;
     }
 
-    .btn-danger:hover {
-        background-color: #c82333;
-        border-color: #bd2130;
+        .btn-outline-primary:hover {
+            background-color: #6a4e23; /* Marrón oscuro */
+            color: white;
+        }
+
+    .btn-group {
+        text-align: center;
     }
 
     dl {
@@ -104,6 +74,7 @@
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
     }
 
     dt {
@@ -119,4 +90,61 @@
     .text-center {
         text-align: center;
     }
+
+    .text-warning {
+        font-size: 1.3em;
+        color: #ffcc00; /* Amarillo para la advertencia */
+    }
 </style>
+
+<div class="container mt-5">
+    <h1 class="text-center text-danger">Eliminar Producto</h1>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <!-- Pregunta de confirmación con color marrón -->
+            <h3 class="text-center" style="color: #6a4e23;">¿Está seguro de que desea eliminar este producto?</h3>
+
+            <dl class="row mt-4">
+
+                <dt class="col-sm-3 font-weight-bold">ID del Producto:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdHelado)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Descripción:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Cantidad (Kilos):</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Kilos)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Usuario Alta:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioAlta)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Fecha Alta:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaAlta)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Usuario Modificación:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioModificacion)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Fecha Modificación:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaModificacion)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Usuario Baja:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioBaja)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Fecha Baja:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaBaja)</dd>
+            </dl>
+
+            <div class="btn-group">
+                <form asp-action="Delete">
+                    <input type="submit" value="Eliminar Producto" class="btn btn-danger btn-lg" />
+                </form>
+                <br />
+                <a class="btn btn-outline-primary mt-2" asp-action="Index">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</div>
+

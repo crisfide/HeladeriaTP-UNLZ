@@ -5,51 +5,50 @@
 }
 
 <div class="container mt-5">
-    <h1 class="text-center text-primary">Detalles del Producto</h1>
+    <h1 class="text-center text-brown">Detalles del Producto</h1>
     <hr />
 
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <!-- Detalles del producto -->
+            
             <dl class="row">
-                <!-- Id del helado -->
+                
                 <dt class="col-sm-3 font-weight-bold">ID del Producto:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.IdHelado)</dd>
 
-                <!-- Descripción -->
+              
                 <dt class="col-sm-3 font-weight-bold">Descripción:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
 
-                <!-- Kilos -->
+               
                 <dt class="col-sm-3 font-weight-bold">Cantidad (Kilos):</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.Kilos)</dd>
 
-                <!-- Usuario de Alta -->
+                
                 <dt class="col-sm-3 font-weight-bold">Usuario Alta:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioAlta)</dd>
 
-                <!-- Fecha de Alta -->
+            
                 <dt class="col-sm-3 font-weight-bold">Fecha Alta:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaAlta)</dd>
 
-                <!-- Usuario de Modificación -->
+              
                 <dt class="col-sm-3 font-weight-bold">Usuario Modificación:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioModificacion)</dd>
 
-                <!-- Fecha de Modificación -->
+               
                 <dt class="col-sm-3 font-weight-bold">Fecha Modificación:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaModificacion)</dd>
 
-                <!-- Usuario de Baja -->
+              
                 <dt class="col-sm-3 font-weight-bold">Usuario Baja:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioBaja)</dd>
 
-                <!-- Fecha de Baja -->
                 <dt class="col-sm-3 font-weight-bold">Fecha Baja:</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaBaja)</dd>
             </dl>
 
-            <!-- Acciones -->
+           
             <div class="text-center mt-4">
                 <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@Model.IdHelado">Editar Producto</a> |
                 <a class="btn btn-outline-primary" asp-action="Index">Volver a la lista</a>
@@ -58,17 +57,18 @@
     </div>
 </div>
 
-<!-- Estilo personalizado -->
+
 <style>
     .container {
-        background-color: #f8f9fa;
+        background-color: #f5f5f5; 
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1, h4 {
-        color: #007bff;
+    h1 {
+        color: #6a4e23; 
+        font-weight: bold;
     }
 
     .font-weight-bold {
@@ -76,31 +76,27 @@
     }
 
     .btn-outline-warning {
-        border-color: #ffc107;
-        color: #ffc107;
+        border-color: #c19a6b; 
+        color: #c19a6b; 
     }
 
-    .btn-outline-warning:hover {
-        background-color: #ffc107;
-        color: white;
-    }
+        .btn-outline-warning:hover {
+            background-color: #c19a6b;
+            color: white;
+        }
 
     .btn-outline-primary {
-        border-color: #007bff;
-        color: #007bff;
+        border-color: #6a4e23; 
+        color: #6a4e23;
     }
 
-    .btn-outline-primary:hover {
-        background-color: #007bff;
-        color: white;
-    }
-
-    .row {
-        margin-top: 20px;
-    }
+        .btn-outline-primary:hover {
+            background-color: #6a4e23;
+            color: white;
+        }
 
     dl {
-        background-color: #fff;
+        background-color: #fff; 
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -108,11 +104,20 @@
 
     dt {
         font-weight: 600;
-        color: #333;
+        color: #6a4e23; 
     }
 
     dd {
         margin-left: 0;
-        color: #555;
+        color: #7a5c39; 
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .row {
+        margin-top: 20px;
     }
 </style>
+

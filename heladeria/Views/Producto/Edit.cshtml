@@ -5,66 +5,67 @@
 }
 
 <div class="container mt-5">
-    <h1 class="text-center text-primary">Editar Producto</h1>
+    <h1 class="text-center text-brown">Editar Producto</h1>
     <h4 class="text-center">Modificar los detalles del helado</h4>
     <hr />
 
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form asp-action="Edit">
-                <!-- Validación global -->
+                
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-                <!-- Id del helado (oculto) -->
+                
                 <div class="form-group" style="display:none">
                     <label asp-for="IdHelado" class="control-label"></label>
                     <input asp-for="IdHelado" class="form-control" type="hidden" />
                     <span asp-validation-for="IdHelado" class="text-danger"></span>
                 </div>
 
-                <!-- Descripción -->
+                
                 <div class="form-group">
                     <label asp-for="Descripcion" class="control-label">Descripción</label>
                     <input asp-for="Descripcion" class="form-control" placeholder="Descripción del helado" />
                     <span asp-validation-for="Descripcion" class="text-danger"></span>
                 </div>
 
-                <!-- Kilos -->
+                
                 <div class="form-group">
                     <label asp-for="Kilos" class="control-label">Cantidad (Kilos)</label>
                     <input asp-for="Kilos" class="form-control" placeholder="Cantidad en Kilos" />
                     <span asp-validation-for="Kilos" class="text-danger"></span>
                 </div>
 
-                <!-- Botón de guardar -->
+                
                 <div class="form-group text-center">
-                    <input type="submit" value="Guardar Cambios" class="btn btn-success btn-lg" />
+                    <input type="submit" value="Guardar Cambios" class="btn btn-brown btn-lg" />
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Regresar a la lista -->
+  
     <div class="text-center mt-4">
-        <a asp-action="Index" class="btn btn-outline-primary btn-lg">Volver a la lista</a>
+        <a asp-action="Index" class="btn btn-outline-brown btn-lg">Volver a la lista</a>
     </div>
 </div>
 
-<!-- Estilo personalizado -->
+
 <style>
     .container {
-        background-color: #f8f9fa;
+        background-color: #f5f5f5; 
         border-radius: 10px;
         padding: 30px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     h1, h4 {
-        color: #007bff;
+        color: #6a4e23; 
     }
 
     .form-group label {
         font-weight: bold;
+        color: #6a4e23; 
     }
 
     .form-control {
@@ -78,23 +79,30 @@
         font-size: 1.1em;
     }
 
-    .btn-success {
-        background-color: #28a745;
-        border-color: #28a745;
+    .btn-brown {
+        background-color: #6a4e23; 
+        border-color: #6a4e23; 
+        color: white;
     }
 
-        .btn-success:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
+        .btn-brown:hover {
+            background-color: #5a3c1d; 
+            border-color: #5a3c1d;
         }
 
-    .btn-outline-primary {
-        border-color: #007bff;
-        color: #007bff;
+    .btn-outline-brown {
+        border-color: #6a4e23; 
+        color: #6a4e23;
     }
 
-        .btn-outline-primary:hover {
-            background-color: #007bff;
+        .btn-outline-brown:hover {
+            background-color: #6a4e23;
             color: white;
         }
+
+    .text-danger {
+        color: #ff4d4d; 
+    }
 </style>
+
+

@@ -4,94 +4,112 @@
     ViewData["Title"] = "Crear Producto";
 }
 
-<!-- Estilos personalizados para el formulario -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+    body {
+        background-color: #f4f3ee;
+        font-family: 'Poppins', sans-serif;
+        color: #4a4a4a;
+    }
+
     .form-container {
-        background-color: #e6f7ff; /* Fondo azul claro */
-        border-radius: 8px;
-        padding: 30px;
+        background-color: #f9f7f2; 
+        border-radius: 10px;
+        padding: 35px;
         margin-top: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .form-header {
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        color: #ffcc00; /* Amarillo brillante */
+        color: #a37d6c;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2em;
+        font-weight: bold;
         margin-bottom: 20px;
     }
 
-    .btn-create {
-        background-color: #ffcc00; /* Amarillo brillante */
-        color: white;
-        font-size: 1.2em;
-        width: 100%;
-        border-radius: 8px;
-        padding: 10px;
-    }
-
-        .btn-create:hover {
-            background-color: #e6ac00; /* Amarillo más oscuro al pasar el mouse */
-            color: white;
-        }
-
     .form-group label {
-        font-weight: bold;
-        color: #007bff; /* Azul para etiquetas */
+        font-weight: 600;
+        color: #7d8c8b;
+        font-size: 1.1em;
     }
 
     .form-group input {
         border-radius: 8px;
-        border: 1px solid #007bff;
+        border: 1px solid #c3bfb3;
         padding: 10px;
         font-size: 1em;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        transition: border-color 0.3s ease;
     }
 
         .form-group input:focus {
-            border-color: #ffcc00; /* Cambio de borde cuando el campo está enfocado */
-            box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+            border-color: #a37d6c;
+            box-shadow: 0 0 5px rgba(163, 125, 108, 0.3);
         }
 
-    .form-group .text-danger {
-        font-size: 0.9em;
-        color: #ff4d4d; /* Rojo claro para los mensajes de error */
+    .btn-create {
+        background-color: #a37d6c;
+        color: white;
+        font-size: 1.1em;
+        padding: 12px;
+        width: 100%;
+        border-radius: 8px;
+        font-weight: 500;
     }
+
+        .btn-create:hover {
+            background-color: #7d8c8b;
+            color: #f4f3ee;
+        }
+
+    .text-danger {
+        color: #d9534f;
+        font-size: 0.9em;
+    }
+
+    .back-btn {
+        color: #7d8c8b;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+        .back-btn:hover {
+            color: #a37d6c;
+        }
 </style>
 
 <div class="container form-container">
-    <h1 class="form-header">Crear Nuevo Producto</h1>
-    <h4>Producto</h4>
-    <hr />
+    <h1 class="form-header">Crear Nuevo Sabor</h1>
 
     <form asp-action="Create">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <!-- Campo Descripción -->
+        
         <div class="form-group">
             <label asp-for="Descripcion" class="control-label">Descripción</label>
             <input asp-for="Descripcion" class="form-control" />
             <span asp-validation-for="Descripcion" class="text-danger"></span>
         </div>
 
-        <!-- Campo Kilos -->
+       
         <div class="form-group">
             <label asp-for="Kilos" class="control-label">Kilos</label>
             <input asp-for="Kilos" class="form-control" />
             <span asp-validation-for="Kilos" class="text-danger"></span>
         </div>
 
-        <!-- Botón para crear el producto -->
+        
         <div class="form-group">
-            <input type="submit" value="Crear Producto" class="btn btn-create" />
+            <input type="submit" value="Crear Sabor" class="btn btn-create" />
         </div>
     </form>
 
-    <!-- Enlace para volver a la lista -->
-    <div>
-        <a asp-action="Index" class="btn btn-outline-primary">Volver a la lista</a>
+    
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="back-btn">← Volver a la lista</a>
     </div>
 </div>
-

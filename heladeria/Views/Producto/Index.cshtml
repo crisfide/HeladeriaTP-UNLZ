@@ -1,67 +1,94 @@
-﻿@model IEnumerable<heladeria.Models.Producto> 
+﻿@model IEnumerable<heladeria.Models.Producto>
 
 @{
     ViewData["Title"] = "Listado de Helados";
 }
 
-<!-- Incluyendo la fuente de Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-    .heladeria-container {
-        background-color: #e6f7ff;
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 20px;
+    body {
+        background-color: #f4f3ee;
+        font-family: 'Poppins', sans-serif;
+        color: #4a4a4a;
     }
 
-    /* Cambiar tipo de letra en el header */
+    .heladeria-container {
+        background-color: #f7f4ed;
+        border-radius: 12px;
+        padding: 25px;
+        margin-top: 30px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
     .heladeria-header {
-        font-family: 'Poppins', sans-serif;  /* Nueva fuente */
-        color: #ffcc00; 
+        color: #a37d6c;
         text-align: center;
-        font-size: 2.5em;
-        margin-bottom: 20px;
+        font-size: 2.2em;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .sub-header {
+        color: #7d8c8b;
+        font-size: 1.5em;
+        font-weight: 500;
     }
 
     .btn-helado {
-        background-color: #007bff;
+        background-color: #a37d6c;
         color: white;
         border: none;
+        font-size: 0.9em;
+        padding: 8px 16px;
+        transition: all 0.3s ease;
     }
 
-    .btn-helado:hover {
-        background-color: #0056b3;
-        color: #fff;
-    }
+        .btn-helado:hover {
+            background-color: #6d5c56;
+            color: #f4f3ee;
+        }
 
     .table-helado th {
-        background-color: #ffcc00;
-        color: #333;
+        background-color: #c3bfb3;
+        color: #4a4a4a;
+        font-weight: 600;
+        text-align: center;
     }
 
     .table-helado td {
-        background-color: #e0f7ff;
+        background-color: #f2ece5;
+        color: #555;
+        text-align: center;
     }
 
     .add-helado-btn {
-        background-color: #ffcc00;
+        background-color: #a37d6c;
         color: white;
-        font-size: 1.1em;
         border: none;
+        font-size: 1em;
+        padding: 10px 20px;
+        border-radius: 8px;
     }
 
-    .add-helado-btn:hover {
-        background-color: #e6ac00;
+        .add-helado-btn:hover {
+            background-color: #7d8c8b;
+            color: white;
+        }
+
+    .icon {
+        margin-right: 8px;
     }
 </style>
 
 <div class="container heladeria-container">
-    <h1 class="heladeria-header">Bienvenidos a Nuestra Heladería</h1>
+    <h1 class="heladeria-header">La Casa del Helado</h1>
 
-    <div class="d-flex justify-content-between mb-3">
-        <h4 style="color: #007bff;">Nuestros Helados</h4>
-        <a asp-action="Create" class="btn add-helado-btn">🍦 Agregar Nuevo Helado</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="sub-header">Nuestros Sabores</h4>
+        <a asp-action="Create" class="btn add-helado-btn">
+            <span class="icon">🍦</span> Agregar Nuevo Helado
+        </a>
     </div>
 
     <table class="table table-hover table-helado table-bordered">
@@ -72,10 +99,6 @@
                 <th>@Html.DisplayNameFor(model => model.Kilos)</th>
                 <th>@Html.DisplayNameFor(model => model.IdUsuarioAlta)</th>
                 <th>@Html.DisplayNameFor(model => model.FechaAlta)</th>
-                <th>@Html.DisplayNameFor(model => model.IdUsuarioModificacion)</th>
-                <th>@Html.DisplayNameFor(model => model.FechaModificacion)</th>
-                <th>@Html.DisplayNameFor(model => model.IdUsuarioBaja)</th>
-                <th>@Html.DisplayNameFor(model => model.FechaBaja)</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -88,10 +111,6 @@
                     <td>@Html.DisplayFor(modelItem => item.Kilos)</td>
                     <td>@Html.DisplayFor(modelItem => item.IdUsuarioAlta)</td>
                     <td>@Html.DisplayFor(modelItem => item.FechaAlta)</td>
-                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioModificacion)</td>
-                    <td>@Html.DisplayFor(modelItem => item.FechaModificacion)</td>
-                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioBaja)</td>
-                    <td>@Html.DisplayFor(modelItem => item.FechaBaja)</td>
                     <td>
                         @Html.ActionLink("Editar", "Edit", new { id = item.IdHelado }, new { @class = "btn btn-helado btn-sm me-2" })
                         @Html.ActionLink("Detalles", "Details", new { id = item.IdHelado }, new { @class = "btn btn-helado btn-sm me-2" })
