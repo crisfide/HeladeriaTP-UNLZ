@@ -1,83 +1,104 @@
-﻿@model IEnumerable<heladeria.Models.Producto>
+﻿@model IEnumerable<heladeria.Models.Producto> 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listado de Helados";
 }
 
-<h1>Index</h1>
+<!-- Incluyendo la fuente de Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdHelado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Kilos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdUsuarioAlta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaAlta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdUsuarioModificacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaModificacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdUsuarioBaja)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaBaja)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdHelado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kilos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdUsuarioAlta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaAlta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdUsuarioModificacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaModificacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdUsuarioBaja)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaBaja)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.IdHelado }) |
-                @Html.ActionLink("Details", "Details", new { id=item.IdHelado }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.IdHelado })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .heladeria-container {
+        background-color: #e6f7ff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Cambiar tipo de letra en el header */
+    .heladeria-header {
+        font-family: 'Poppins', sans-serif;  /* Nueva fuente */
+        color: #ffcc00; 
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .btn-helado {
+        background-color: #007bff;
+        color: white;
+        border: none;
+    }
+
+    .btn-helado:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+    .table-helado th {
+        background-color: #ffcc00;
+        color: #333;
+    }
+
+    .table-helado td {
+        background-color: #e0f7ff;
+    }
+
+    .add-helado-btn {
+        background-color: #ffcc00;
+        color: white;
+        font-size: 1.1em;
+        border: none;
+    }
+
+    .add-helado-btn:hover {
+        background-color: #e6ac00;
+    }
+</style>
+
+<div class="container heladeria-container">
+    <h1 class="heladeria-header">Bienvenidos a Nuestra Heladería</h1>
+
+    <div class="d-flex justify-content-between mb-3">
+        <h4 style="color: #007bff;">Nuestros Helados</h4>
+        <a asp-action="Create" class="btn add-helado-btn">🍦 Agregar Nuevo Helado</a>
+    </div>
+
+    <table class="table table-hover table-helado table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.IdHelado)</th>
+                <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+                <th>@Html.DisplayNameFor(model => model.Kilos)</th>
+                <th>@Html.DisplayNameFor(model => model.IdUsuarioAlta)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaAlta)</th>
+                <th>@Html.DisplayNameFor(model => model.IdUsuarioModificacion)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaModificacion)</th>
+                <th>@Html.DisplayNameFor(model => model.IdUsuarioBaja)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaBaja)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.IdHelado)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Kilos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioAlta)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaAlta)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioModificacion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaModificacion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioBaja)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaBaja)</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.IdHelado }, new { @class = "btn btn-helado btn-sm me-2" })
+                        @Html.ActionLink("Detalles", "Details", new { id = item.IdHelado }, new { @class = "btn btn-helado btn-sm me-2" })
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.IdHelado }, new { @class = "btn btn-helado btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

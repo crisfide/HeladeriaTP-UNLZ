@@ -1,74 +1,122 @@
 ﻿@model heladeria.Models.Producto
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar Producto";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Producto</h4>
+<div class="container mt-5">
+    <h1 class="text-center text-danger">Eliminar Producto</h1>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdHelado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdHelado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Kilos)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Kilos)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdUsuarioAlta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdUsuarioAlta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaAlta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaAlta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdUsuarioModificacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdUsuarioModificacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaModificacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaModificacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdUsuarioBaja)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdUsuarioBaja)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaBaja)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaBaja)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Confirmación de eliminación -->
+            <h3 class="text-warning text-center">¿Está seguro de que desea eliminar este producto?</h3>
+            <dl class="row mt-4">
+                <!-- ID del helado -->
+                <dt class="col-sm-3 font-weight-bold">ID del Producto:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdHelado)</dd>
+
+                <!-- Descripción -->
+                <dt class="col-sm-3 font-weight-bold">Descripción:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
+
+                <!-- Kilos -->
+                <dt class="col-sm-3 font-weight-bold">Cantidad (Kilos):</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Kilos)</dd>
+
+                <!-- Usuario de Alta -->
+                <dt class="col-sm-3 font-weight-bold">Usuario Alta:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioAlta)</dd>
+
+                <!-- Fecha de Alta -->
+                <dt class="col-sm-3 font-weight-bold">Fecha Alta:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaAlta)</dd>
+
+                <!-- Usuario de Modificación -->
+                <dt class="col-sm-3 font-weight-bold">Usuario Modificación:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioModificacion)</dd>
+
+                <!-- Fecha de Modificación -->
+                <dt class="col-sm-3 font-weight-bold">Fecha Modificación:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaModificacion)</dd>
+
+                <!-- Usuario de Baja -->
+                <dt class="col-sm-3 font-weight-bold">Usuario Baja:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.IdUsuarioBaja)</dd>
+
+                <!-- Fecha de Baja -->
+                <dt class="col-sm-3 font-weight-bold">Fecha Baja:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaBaja)</dd>
+            </dl>
+
+            <!-- Formulario de confirmación de eliminación -->
+            <div class="text-center mt-4">
+                <form asp-action="Delete">
+                    <input type="submit" value="Eliminar" class="btn btn-danger btn-lg" />
+                </form>
+                <br />
+                <a class="btn btn-outline-primary mt-2" asp-action="Index">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Estilo personalizado -->
+<style>
+    .container {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h3 {
+        color: #dc3545;
+    }
+
+    .font-weight-bold {
+        font-weight: 600;
+    }
+
+    .btn-outline-primary {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    dl {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    dt {
+        font-weight: 600;
+        color: #333;
+    }
+
+    dd {
+        margin-left: 0;
+        color: #555;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
