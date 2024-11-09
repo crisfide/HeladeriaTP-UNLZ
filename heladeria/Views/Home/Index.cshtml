@@ -15,12 +15,6 @@
     {
         <h3>Debes iniciar sesión para acceder a más funciones</h3>
         <p>Si aún no tienes cuenta, puedes iniciar sesión con Google:</p>
-=======
-@if (Context.User.Identity.IsAuthenticated)
-{
-    <h3>Hola @User.Identity.Name</h3>
-    <br />
->>>>>>> b8ae88c2e5a19db08f84fb57facc599870d0c11c
 
         <div class="mt-4">
             <!-- Botón de Google -->
@@ -39,6 +33,7 @@
             </a>
         </div>
     }
+
 </div>
 
 <!-- Estilo personalizado -->
