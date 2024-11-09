@@ -6083,23 +6083,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Casa\\.nuget\\packages\\": {},
+    "C:\\Users\\Christian\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TP_PROGRAMACION4\\HeladeriaTP-UNLZ\\heladeria\\heladeria.csproj",
+      "projectUniqueName": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\heladeria.csproj",
       "projectName": "heladeria",
-      "projectPath": "C:\\TP_PROGRAMACION4\\HeladeriaTP-UNLZ\\heladeria\\heladeria.csproj",
-      "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-      "outputPath": "C:\\TP_PROGRAMACION4\\HeladeriaTP-UNLZ\\heladeria\\obj\\",
+      "projectPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\heladeria.csproj",
+      "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+      "outputPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6115,8 +6115,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\TP_PROGRAMACION4\\HeladeriaTP-UNLZ\\HeladeriaManager\\HeladeriaManager.csproj": {
-              "projectPath": "C:\\TP_PROGRAMACION4\\HeladeriaTP-UNLZ\\HeladeriaManager\\HeladeriaManager.csproj"
+            "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj": {
+              "projectPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj"
             }
           }
         }
@@ -6176,7 +6176,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
