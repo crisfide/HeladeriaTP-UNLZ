@@ -2,21 +2,30 @@
     ViewData["Title"] = "Home Page";
 }
 
+<<<<<<< HEAD
+<div class="container text-center mt-5">
+    @if (Context.User.Identity.IsAuthenticated)
+    {
+        <h3>¡Hola, @User.Identity.Name!</h3>
+        <p>Bienvenido de nuevo a nuestra heladería.</p>
+
+        <a asp-controller="Login" asp-action="Logout" class="btn btn-outline-danger btn-lg">Cerrar sesión</a>
+    }
+    else
+    {
+        <h3>Debes iniciar sesión para acceder a más funciones</h3>
+        <p>Si aún no tienes cuenta, puedes iniciar sesión con Google:</p>
+=======
 @if (Context.User.Identity.IsAuthenticated)
 {
     <h3>Hola @User.Identity.Name</h3>
     <br />
+>>>>>>> b8ae88c2e5a19db08f84fb57facc599870d0c11c
 
-    <a asp-controller="Login" asp-action="Logout" class="btn btn-outline-danger">Cerrar sesión</a>
-}
-else
-{
-    <h3>Debes iniciar sesion</h3>
-
-    <div class="">
-        <a asp-controller="Login" asp-action="Login" class="btn btn-outline-primary bf b io ip bk th gd ff ti fl tj ev fa tk tl tm tn to fb fc fd bm fe" rel="noopener follow">
-            <div class="ab q cp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="l">
+        <div class="mt-4">
+            <!-- Botón de Google -->
+            <a asp-controller="Login" asp-action="Login" class="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="mr-2">
                     <g id="google">
                         <g id="google-vector" fill-rule="evenodd" clip-rule="evenodd">
                             <path id="Shape" fill="#4285F4" d="M20.64 12.205q-.002-.957-.164-1.84H12v3.48h4.844a4.14 4.14 0 0 1-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615"></path>
@@ -25,9 +34,56 @@ else
                             <path id="Shape_4" fill="#EA4335" d="M12 6.58c1.322 0 2.508.455 3.441 1.346l2.582-2.58C16.463 3.892 14.427 3 12 3a9 9 0 0 0-8.043 4.958l3.007 2.332c.708-2.127 2.692-3.71 5.036-3.71"></path>
                         </g>
                     </g>
-                </svg>Sign up with Google
-                <div class="br tp l"></div>
-            </div>
-        </a>
-    </div>
-}
+                </svg>
+                Iniciar sesión con Google
+            </a>
+        </div>
+    }
+</div>
+
+<!-- Estilo personalizado -->
+<style>
+    .container {
+        background-color: #f2f8ff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        color: #007bff;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .btn-lg {
+        font-size: 1.2em;
+        padding: 15px 25px;
+        border-radius: 8px;
+    }
+
+    .btn-outline-danger {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-outline-primary {
+        border-color: #4285F4;
+        color: #4285F4;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #4285F4;
+        color: white;
+    }
+</style>
