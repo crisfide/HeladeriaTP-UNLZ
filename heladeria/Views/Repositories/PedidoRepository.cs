@@ -59,7 +59,29 @@ namespace heladeria.Repositories
             }
         }
 
-        
+
+        public void Actualizar(Pedido pedido)
+        {
+            using (var db = new SqlConnection(connectionString))
+            {
+                var sql = "UPDATE Pedido SET Kilos = @Kilos, IdHelado = @IdHelado WHERE IdPedido = @IdPedido";
+                db.Execute(sql, pedido);
+            }
+        }
+
+
+        public void Eliminar(int id)
+        {
+            using (var db = new SqlConnection(connectionString))
+            {
+                var sql = "DELETE FROM Pedido WHERE IdPedido = @Id";
+                db.Execute(sql, new { Id = id });
+            }
+        }
+
+
+
+
     }
 
 }

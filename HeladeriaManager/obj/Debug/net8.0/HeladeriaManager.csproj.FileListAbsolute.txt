@@ -34,3 +34,15 @@ C:\TP_HELADERIA2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\Heladeria
 C:\TP_HELADERIA2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\refint\HeladeriaManager.dll
 C:\TP_HELADERIA2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.pdb
 C:\TP_HELADERIA2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\ref\HeladeriaManager.dll
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.deps.json
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.dll
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\bin\Debug\net8.0\HeladeriaManager.pdb
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.AssemblyInfoInputs.cache
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.AssemblyInfo.cs
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.csproj.CoreCompileInputs.cache
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.sourcelink.json
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.dll
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\refint\HeladeriaManager.dll
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\HeladeriaManager.pdb
+C:\TPheladeria2024\HeladeriaTP-UNLZ\HeladeriaManager\obj\Debug\net8.0\ref\HeladeriaManager.dll

@@ -24,7 +24,7 @@ namespace heladeria.Controllers
             }
 
             IEnumerable<Pedido> lista = null;
-            if(User.Claims.First(c => c.Type == "UNLZRole").Value == "Administrador")
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value == "Administrador")
             {
                 lista = PedidoRepository.ObtenerTodos();
             }
@@ -77,9 +77,9 @@ namespace heladeria.Controllers
                 IdHelado = int.Parse(collection["IdHelado"]),
                 IdUsuarioAlta = idUsuario
             };
-                PedidoRepository.Agregar(pedido);
+            PedidoRepository.Agregar(pedido);
 
-                return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index));
             //}
             //catch
             //{
@@ -87,11 +87,17 @@ namespace heladeria.Controllers
             //}
         }
 
+
+
+
         // GET: PedidoController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
+
+
+
 
         // POST: PedidoController/Edit/5
         [HttpPost]
@@ -100,33 +106,69 @@ namespace heladeria.Controllers
         {
             try
             {
+               
+                Pedido pedido = new Pedido()
+                {
+                    IdPedido = id, 
+                    Kilos = int.Parse(collection["Kilos"]),  
+                    IdHelado = int.Parse(collection["IdHelado"]), 
+                    IdUsuarioAlta = 0,  
+                   
+                };
+
+                
+                PedidoRepository.Actualizar(pedido);
+
+              
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
+              
                 return View();
             }
         }
 
         // GET: PedidoController/Delete/5
+
+        // GET: PedidoController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+           
+
+            
+            var pedido = PedidoRepository.ObtenerPorId(id);
+            if (pedido == null)
+            {
+                return RedirectToAction("Error", "Home", new { message = "El pedido no existe." });
+            }
+
+            return View(pedido);  
         }
 
-        // POST: PedidoController/Delete/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                
+                PedidoRepository.Eliminar(id);
+                return RedirectToAction(nameof(Index));  
             }
             catch
             {
-                return View();
+                return View();  
             }
         }
+
+
+
+
+
+
+            
+        
     }
 }
