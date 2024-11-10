@@ -88,7 +88,7 @@ namespace heladeria.Controllers
             }
             catch
             {
-                return View();
+                return RedirectToAction("Error", "Home", new { message = "Error al crear el producto" });
             }
         }
 

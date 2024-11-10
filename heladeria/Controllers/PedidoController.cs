@@ -67,24 +67,24 @@ namespace heladeria.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
-            //try
-            //{
-
-            int idUsuario = int.Parse(User.Claims.First(c => c.Type == "usuario").Value);
-            Pedido pedido = new Pedido()
+            try
             {
-                Kilos = int.Parse(collection["Kilos"]),
-                IdHelado = int.Parse(collection["IdHelado"]),
-                IdUsuarioAlta = idUsuario
-            };
-            PedidoRepository.Agregar(pedido);
 
-            return RedirectToAction(nameof(Index));
-            //}
-            //catch
-            //{
-            //    return View();
-            //}
+                int idUsuario = int.Parse(User.Claims.First(c => c.Type == "usuario").Value);
+                Pedido pedido = new Pedido()
+                {
+                    Kilos = int.Parse(collection["Kilos"]),
+                    IdHelado = int.Parse(collection["IdHelado"]),
+                    IdUsuarioAlta = idUsuario
+                };
+                PedidoRepository.Agregar(pedido);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return RedirectToAction("Error", "Home", new { message = "Error al crear el pedido" });
+            }
         }
 
 
@@ -93,7 +93,8 @@ namespace heladeria.Controllers
         // GET: PedidoController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var p = PedidoRepository.ObtenerPorId(id);
+            return View(p);
         }
 
 
@@ -124,8 +125,8 @@ namespace heladeria.Controllers
             }
             catch
             {
-              
-                return View();
+
+                return RedirectToAction("Error", "Home", new { message = "Error al editar el pedido" });
             }
         }
 
@@ -159,7 +160,7 @@ namespace heladeria.Controllers
             }
             catch
             {
-                return View();  
+                return RedirectToAction("Error", "Home", new { message = "Error al eliminar el pedido" });
             }
         }
 
