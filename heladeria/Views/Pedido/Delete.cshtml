@@ -4,97 +4,7 @@
     ViewData["Title"] = "Eliminar Pedido";
 }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-    body {
-        background-color: #f4f3ee;
-        font-family: 'Poppins', sans-serif;
-        color: #4a4a4a;
-    }
-
-    .container {
-        background-color: #f9f7f2;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-    }
-
-    h1, h3 {
-        color: #6a4e23;
-    }
-
-    h1 {
-        font-size: 2.5em;
-        font-weight: 600;
-    }
-
-    .font-weight-bold {
-        font-weight: 600;
-    }
-
-    .btn-danger {
-        background-color: #6a4e23;
-        border-color: #6a4e23;
-        font-size: 1.2em;
-        width: 200px;
-        padding: 12px;
-        border-radius: 8px;
-        font-weight: 600;
-        color: white;
-    }
-
-        .btn-danger:hover {
-            background-color: #5a3c1d;
-            border-color: #5a3c1d;
-        }
-
-    .btn-outline-primary {
-        color: #6a4e23;
-        border-color: #6a4e23;
-        font-weight: 600;
-        padding: 10px 20px;
-        margin-top: 20px;
-        font-size: 1.1em;
-    }
-
-        .btn-outline-primary:hover {
-            background-color: #6a4e23;
-            color: white;
-        }
-
-    .btn-group {
-        text-align: center;
-    }
-
-    dl {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-    }
-
-    dt {
-        font-weight: 600;
-        color: #333;
-    }
-
-    dd {
-        margin-left: 0;
-        color: #555;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    .text-warning {
-        font-size: 1.3em;
-        color: #ffcc00;
-    }
-</style>
 
 <div class="container mt-5">
     <h1 class="text-center text-danger">Eliminar Pedido</h1>
@@ -120,16 +30,16 @@
               
             </dl>
 
-            <div class="btn-group">
+            <div class="btn-group text-center">
                 <!-- Formulario de eliminación -->
                 <form asp-action="Delete" method="post">
                     <!-- Campo oculto con el Id del pedido -->
                     <input type="hidden" name="id" value="@Model.IdPedido" />
 
-                    <input type="submit" value="Eliminar Pedido" class="btn btn-danger btn-lg" />
+                    <input type="submit" value="Eliminar Pedido" class="btn btn-primary btn-lg" />
+                    <a class="btn btn-outline-brown mt-2" asp-action="Index">Volver a la lista</a>
                 </form>
                 <br />
-                <a class="btn btn-outline-primary mt-2" asp-action="Index">Volver a la lista</a>
             </div>
         </div>
     </div>

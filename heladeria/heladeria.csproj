@@ -18,4 +18,8 @@
     <ProjectReference Include="..\HeladeriaManager\HeladeriaManager.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+
 </Project>

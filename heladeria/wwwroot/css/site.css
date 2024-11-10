@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+nav {
+    background-color: #0000001d;
+}
+
+nav ul a:hover{
+    font-weight: bolder;
+}
+
+    nav a.navbar-brand {
+        color: #A69D8A;
+    }

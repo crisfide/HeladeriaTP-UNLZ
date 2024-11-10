@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\heladeria.bundle.scp.css"
     },
     {
+      "Id": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\wwwroot\\css\\default.css",
+      "PackagePath": "staticwebassets\\css\\default.css"
+    },
+    {
+      "Id": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\wwwroot\\css\\pedido.css",
+      "PackagePath": "staticwebassets\\css\\pedido.css"
+    },
+    {
+      "Id": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\wwwroot\\css\\producto.css",
+      "PackagePath": "staticwebassets\\css\\producto.css"
+    },
+    {
       "Id": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

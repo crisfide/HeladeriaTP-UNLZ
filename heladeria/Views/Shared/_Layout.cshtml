@@ -7,13 +7,35 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/heladeria.styles.css" asp-append-version="true" />
+
+    @{
+        string cssFile = Url.Content("~/css/default.css"); // CSS por defecto
+
+        var controller = ViewContext.RouteData.Values["controller"].ToString();
+
+        // switch para asignar el archivo CSS basado en el controlador
+        switch (controller)
+        {
+            case "Pedido":
+                cssFile = Url.Content("~/css/pedido.css");
+                break;
+            case "Producto":
+                cssFile = Url.Content("~/css/producto.css");
+                break;
+            default:
+                cssFile = Url.Content("~/css/default.css");
+                break;
+        }
+    }
+    <link rel="stylesheet" href="@cssFile" />
+
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 
 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">heladeria</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
