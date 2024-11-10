@@ -31,11 +31,11 @@ namespace heladeria.Repositories
         }
 
         //pedido
-        public IEnumerable<Pedido> ObtenerPropios(Pedido pedido)
+        public IEnumerable<Pedido> ObtenerPropios(int idUsuario)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Pedido>("SELECT * FROM Grupo6.Pedido WHERE").ToList();
+                return db.Query<Pedido>("SELECT * FROM Grupo6.Pedido WHERE IdUsuarioAlta = @Id", new { Id = idUsuario }).ToList();
             }
         }
 
@@ -54,7 +54,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Pedido (IdHelado, Kilos, IdPedido, IdUsuarioAlta) VALUES (@IdHelado, @Kilos, @IdPedido, @IdUsuarioAlta)";
+                var sql = "INSERT INTO Pedido (IdHelado, Kilos, IdUsuarioAlta) VALUES (@IdHelado, @Kilos, @IdUsuarioAlta)";
                 db.Execute(sql, pedido);
             }
         }

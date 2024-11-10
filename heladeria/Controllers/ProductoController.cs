@@ -35,12 +35,35 @@ namespace heladeria.Controllers
         // GET: ProductoController/Details/5
         public ActionResult Details(int id)
         {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos un usuario" });
+            }
+
+
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value != "Administrador")
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos admin" });
+            }
+
             return View(ProductoRepository.ObtenerPorId(id));
         }
 
         // GET: ProductoController/Create
         public ActionResult Create()
         {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos un usuario" });
+            }
+
+
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value != "Administrador")
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos admin" });
+            }
 
             return View(new Producto());
         }
@@ -72,6 +95,18 @@ namespace heladeria.Controllers
         // GET: ProductoController/Edit/5
         public ActionResult Edit(int id)
         {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos un usuario" });
+            }
+
+
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value != "Administrador")
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos admin" });
+            }
+
             var producto = ProductoRepository.ObtenerPorId(id);
             return View(producto);
         }
@@ -103,6 +138,18 @@ namespace heladeria.Controllers
         // GET: ProductoController/Delete/5
         public ActionResult Delete(int id)
         {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos un usuario" });
+            }
+
+
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value != "Administrador")
+            {
+                return RedirectToAction("Error", "Home", new { message = "No sos admin" });
+            }
+
             var producto = ProductoRepository.ObtenerPorId(id);
             return View(producto);
         }

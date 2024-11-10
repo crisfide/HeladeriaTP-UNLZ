@@ -2,7 +2,7 @@
 {
     public class Pedido
     {
-        public int IdPedido { get; set; }
+        public int? IdPedido { get; set; }
 
         public int Kilos { get; set; }
 

@@ -69,6 +69,7 @@ builder.Services.AddAuthentication(options =>
         var accessToken = ctx.AccessToken;
         ctx.Identity.AddClaim(new System.Security.Claims.Claim("accessToken", accessToken));
 
+
         return Task.CompletedTask;
     };
 
