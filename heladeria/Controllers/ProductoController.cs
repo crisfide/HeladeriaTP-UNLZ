@@ -18,6 +18,17 @@ namespace heladeria.Controllers
         // GET: ProductoController
         public ActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Error","Home", new { message = "No sos un usuario" });                
+            }
+
+
+            if (User.Claims.First(c => c.Type == "UNLZRole").Value != "Administrador")
+            {
+                return RedirectToAction("Error","Home", new { message = "No sos admin" });
+            }
+
             return View(ProductoRepository.ObtenerTodos());
         }
 
@@ -43,10 +54,9 @@ namespace heladeria.Controllers
             {
                 Producto producto = new Producto()
                 {
-                    IdHelado = int.Parse(collection["IdHelado"]),
                     Descripcion = collection["Descripcion"],
                     Kilos = int.Parse(collection["Kilos"]),
-                    IdUsuarioAlta = 0,
+                    IdUsuarioAlta = 3, //admin
                     FechaAlta = DateTime.Now
                 };
                 ProductoRepository.Agregar(producto);
@@ -71,8 +81,8 @@ namespace heladeria.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
-            //try
-            //{
+            try
+            {
                 Producto producto = new Producto()
                 {
                     IdHelado = int.Parse(collection["IdHelado"]),
@@ -83,11 +93,11 @@ namespace heladeria.Controllers
                 };
                 ProductoRepository.Actualizar(producto);
                 return RedirectToAction(nameof(Index));
-            /*}
+            }
             catch
             {
                 return View();
-            }*/
+            }
         }
 
         // GET: ProductoController/Delete/5

@@ -3,6 +3,9 @@
 }
 
 <div class="container ice-cream-container text-center mt-5">
+
+
+    @* solo lo ven los usuarios autenticados *@
     @if (Context.User.Identity.IsAuthenticated)
     {
         <h3>Bienvenido, @User.Identity.Name</h3>
@@ -10,6 +13,9 @@
 
         <a asp-controller="Login" asp-action="Logout" class="btn btn-logout btn-lg mt-4">Cerrar sesión</a>
     }
+
+
+    @* solo lo ven los visitantes NO autenticados *@
     else
     {
         <h3>Bienvenido a Nuestra Heladería</h3>
@@ -18,6 +24,7 @@
 
         <div class="mt-4">
             
+            @* Boton "G iniciar sesion con google" *@
             <a asp-controller="Login" asp-action="Login" class="btn btn-google btn-sm d-flex align-items-center justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" class="me-2">
                     <g id="google">

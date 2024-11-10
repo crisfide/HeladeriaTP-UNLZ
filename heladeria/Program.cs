@@ -43,13 +43,13 @@ builder.Services.AddAuthentication(options =>
         int idUsuario = 0;
         if (usuario == null)
         {
-            Usuario usuarioNuevo = new Usuario();
+            usuario = new Usuario();
             //usuarioNuevo.Nombre = ctx.Identity.Claims.First(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname").Value.ToString();
-            usuarioNuevo.NombreUsuario = ctx.Identity.Claims.First(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value.ToString();
-            usuarioNuevo.GoogleIdentificador = googleNameIdentifier;
-            usuarioNuevo.MailUsuario = ctx.Identity.Claims.First(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value.ToString();
+            usuario.NombreUsuario = ctx.Identity.Claims.First(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value.ToString();
+            usuario.GoogleIdentificador = googleNameIdentifier;
+            usuario.MailUsuario = ctx.Identity.Claims.First(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value.ToString();
 
-            usuarioServicio.Agregar(usuarioNuevo);
+            usuarioServicio.Agregar(usuario);
 
             idUsuario = usuarioServicio.ObtenerPorGoogle(googleNameIdentifier).IdUsuario;
         }
@@ -62,7 +62,9 @@ builder.Services.AddAuthentication(options =>
         // Agregar reclamaciones personalizadas aquí
         ctx.Identity.AddClaim(new System.Security.Claims.Claim("usuario", idUsuario.ToString()));
 
-        ctx.Identity.AddClaim(new System.Security.Claims.Claim("UNLZRole", "Administrador"));
+        //la contraseña es grupo666
+        string rolUsuario = usuario.MailUsuario == "heladeria.unlz.2024@gmail.com" ? "Administrador" : "Cliente";
+        ctx.Identity.AddClaim(new System.Security.Claims.Claim("UNLZRole", rolUsuario));
 
         var accessToken = ctx.AccessToken;
         ctx.Identity.AddClaim(new System.Security.Claims.Claim("accessToken", accessToken));

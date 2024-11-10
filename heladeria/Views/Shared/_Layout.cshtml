@@ -23,8 +23,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        @if (User.Identity.IsAuthenticated)
+                        @* solo lo ven los usuarios autenticados *@
+                        @if (User.Identity.IsAuthenticated) 
                         {
+
+
+                            @* solo lo ven los usuarios ADMIN *@
                             if (User.Claims.First(c => c.Type == "UNLZRole").Value == "Administrador")
                             {
                                 <li class="nav-item">
@@ -36,6 +40,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Pedido" asp-action="Index">Pedidos</a>
                             </li>
+
                         }
                     </ul>
                 </div>
