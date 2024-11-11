@@ -32,8 +32,12 @@
 
                 <div class="form-group">
                     <label asp-for="pedido.IdHelado" class="control-label"></label>
-                    @Html.DropDownListFor(m => m.pedido.IdHelado, Model.listaSabores, "Seleccione un sabor", new { @class = "form-control" })
+                    @Html.DropDownListFor(m => m.pedido.IdHelado, Model.listaSabores, "Seleccione un sabor", 
+                        new { @class = "form-control",id = "selectSabor" })
                     <span asp-validation-for="pedido.IdHelado" class="text-danger"></span>
+                    <div class="control-label text-center mb-3 d-none" id="kilosDisponibles">Kilos Disponibles: 
+                        <span id="kilosDisponiblesValor"></span>
+                    </div>
                 </div>
 
                 

@@ -80,6 +80,7 @@ namespace heladeria.Controllers
             return View(pedidoVM);
         }
 
+
         // POST: PedidoController/Create
         [Authorize]
         [HttpPost]
@@ -96,7 +97,18 @@ namespace heladeria.Controllers
                     IdHelado = int.Parse(collection["pedido.IdHelado"]),
                     IdUsuarioAlta = idUsuario
                 };
+
+                var prod = ProductoRepository.ObtenerPorId(int.Parse(collection["pedido.IdHelado"]));
+                prod.Kilos -= int.Parse(collection["pedido.Kilos"]);
+                if(prod.Kilos<0)
+                {
+                    return RedirectToAction("Error", "Home", new { message = "No hay stock para su pedido" });
+                }
+
                 PedidoRepository.Agregar(pedido);
+
+                //resta los kilos pedidos al producto
+                ProductoRepository.Actualizar(prod);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -107,6 +119,21 @@ namespace heladeria.Controllers
         }
 
 
+        //muestra los kilos disponibles, se llama desde JS
+        public ActionResult ObtenerKilos(int id)
+        {
+            try
+            {
+                if (id == 0) throw new Exception();
+
+                int kilos = ProductoRepository.ObtenerPorId(id).Kilos;
+                return Ok(kilos);
+            }
+            catch
+            {
+                return Ok(0);
+            }
+        }
 
 
         // GET: PedidoController/Edit/5
