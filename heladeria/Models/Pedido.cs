@@ -11,8 +11,11 @@
         public int IdUsuarioAlta { get; set; }
     }
 
+    public class PedidoCompleto : Pedido
+    {
+        public string Descripcion { get; set; } = string.Empty;
 
-
+    }
 
 
 

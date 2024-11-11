@@ -1,4 +1,4 @@
-﻿@model IEnumerable<heladeria.Models.Pedido>
+﻿@model IEnumerable<heladeria.Models.PedidoCompleto>
 
 @{
     ViewData["Title"] = "Pedidos";
@@ -21,7 +21,7 @@
             <tr>
                 <th>@Html.DisplayNameFor(model => model.IdPedido)</th>
                 <th>@Html.DisplayNameFor(model => model.Kilos)</th>
-                <th>@Html.DisplayNameFor(model => model.IdHelado)</th>
+                <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
                 <th>@Html.DisplayNameFor(model => model.IdUsuarioAlta)</th>
                 <th>Acciones</th>
             </tr>
@@ -32,7 +32,7 @@
                 <tr>
                     <td>@Html.DisplayFor(modelItem => item.IdPedido)</td>
                     <td>@Html.DisplayFor(modelItem => item.Kilos)</td>
-                    <td>@Html.DisplayFor(modelItem => item.IdHelado)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
                     <td>@Html.DisplayFor(modelItem => item.IdUsuarioAlta)</td>
                     <td>
 

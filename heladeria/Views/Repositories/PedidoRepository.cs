@@ -22,20 +22,20 @@ namespace heladeria.Repositories
 
 
         //PEDIDO
-        public IEnumerable<Pedido> ObtenerTodos()
+        public IEnumerable<PedidoCompleto> ObtenerTodos()
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Pedido>("SELECT * FROM Pedido").ToList();
+                return db.Query<PedidoCompleto>("SELECT * FROM Pedido").ToList();
             }
         }
 
         //pedido
-        public IEnumerable<Pedido> ObtenerPropios(int idUsuario)
+        public IEnumerable<PedidoCompleto> ObtenerPropios(int idUsuario)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Pedido>("SELECT * FROM Grupo6.Pedido WHERE IdUsuarioAlta = @Id", new { Id = idUsuario }).ToList();
+                return db.Query<PedidoCompleto>("SELECT * FROM Grupo6.Pedido WHERE IdUsuarioAlta = @Id", new { Id = idUsuario }).ToList();
             }
         }
 

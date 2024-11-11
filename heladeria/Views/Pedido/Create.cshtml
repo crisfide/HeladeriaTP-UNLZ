@@ -1,4 +1,4 @@
-﻿@model heladeria.Models.Pedido
+﻿@model heladeria.Models.PedidoVM
 
 @{
     ViewData["Title"] = "Crear Pedido";
@@ -18,16 +18,22 @@
 
                 
                 <div class="form-group">
-                    <label asp-for="Kilos" class="control-label">Cantidad (Kilos)</label>
-                    <input asp-for="Kilos" class="form-control" placeholder="Cantidad en Kilos" />
-                    <span asp-validation-for="Kilos" class="text-danger"></span>
+                    <label asp-for="pedido.Kilos" class="control-label">Cantidad (Kilos)</label>
+                    <input asp-for="pedido.Kilos" class="form-control" placeholder="Cantidad en Kilos" />
+                    <span asp-validation-for="pedido.Kilos" class="text-danger"></span>
                 </div>
 
                 
+                <!--div class="form-group">
+                    <label asp-for="pedido.IdHelado" class="control-label"></label>
+                    <input asp-for="pedido.IdHelado" class="form-control" />
+                    <span asp-validation-for="pedido.IdHelado" class="text-danger"></span>
+                </div-->
+
                 <div class="form-group">
-                    <label asp-for="IdHelado" class="control-label"></label>
-                    <input asp-for="IdHelado" class="form-control" />
-                    <span asp-validation-for="IdHelado" class="text-danger"></span>
+                    <label asp-for="pedido.IdHelado" class="control-label"></label>
+                    @Html.DropDownListFor(m => m.pedido.IdHelado, Model.listaSabores, "Seleccione un sabor", new { @class = "form-control" })
+                    <span asp-validation-for="pedido.IdHelado" class="text-danger"></span>
                 </div>
 
                 

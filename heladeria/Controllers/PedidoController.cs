@@ -3,16 +3,19 @@ using heladeria.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace heladeria.Controllers
 {
     public class PedidoController : Controller
     {
         private PedidoRepository PedidoRepository { get; set; }
+        private ProductoRepository ProductoRepository { get; set; }
 
-        public PedidoController(PedidoRepository pedidoRepository)
+        public PedidoController(PedidoRepository pedidoRepository, ProductoRepository productoRepository)
         {
             PedidoRepository = pedidoRepository;
+            ProductoRepository = productoRepository;
         }
 
         // GET: PedidoController
@@ -23,7 +26,7 @@ namespace heladeria.Controllers
                 return RedirectToAction("Error", "Home", new { message = "No sos un usuario" });
             }
 
-            IEnumerable<Pedido> lista = null;
+            IEnumerable<PedidoCompleto> lista = null;
             if (User.Claims.First(c => c.Type == "UNLZRole").Value == "Administrador")
             {
                 lista = PedidoRepository.ObtenerTodos();
@@ -32,6 +35,14 @@ namespace heladeria.Controllers
             {
                 int idUsuario = int.Parse(User.Claims.First(c => c.Type == "usuario").Value);
                 lista = PedidoRepository.ObtenerPropios(idUsuario);
+
+            }
+
+            //agregar descripcion a los productos
+            foreach (var pedido in lista)
+            {
+                Producto prod = ProductoRepository.ObtenerPorId(pedido.IdHelado);
+                pedido.Descripcion = prod.Descripcion;
             }
 
             return View(lista);
@@ -58,7 +69,15 @@ namespace heladeria.Controllers
             }
 
 
-            return View(new Pedido());
+            PedidoVM pedidoVM = new PedidoVM();
+            pedidoVM.pedido = null;
+            pedidoVM.listaSabores = new List<SelectListItem>();
+            var sabores = ProductoRepository.ObtenerTodos();
+            foreach (var sabor in sabores)
+            {
+                pedidoVM.listaSabores.Add(new SelectListItem { Value = sabor.IdHelado.ToString(), Text = sabor.Descripcion });
+            }
+            return View(pedidoVM);
         }
 
         // POST: PedidoController/Create
@@ -73,8 +92,8 @@ namespace heladeria.Controllers
                 int idUsuario = int.Parse(User.Claims.First(c => c.Type == "usuario").Value);
                 Pedido pedido = new Pedido()
                 {
-                    Kilos = int.Parse(collection["Kilos"]),
-                    IdHelado = int.Parse(collection["IdHelado"]),
+                    Kilos = int.Parse(collection["pedido.Kilos"]),
+                    IdHelado = int.Parse(collection["pedido.IdHelado"]),
                     IdUsuarioAlta = idUsuario
                 };
                 PedidoRepository.Agregar(pedido);
