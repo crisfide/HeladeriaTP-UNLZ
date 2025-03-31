@@ -1,0 +1,12 @@
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\bin\Release\net8.0\HeladeriaManager.deps.json
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\bin\Release\net8.0\HeladeriaManager.dll
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\bin\Release\net8.0\HeladeriaManager.pdb
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.GeneratedMSBuildEditorConfig.editorconfig
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.AssemblyInfoInputs.cache
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.AssemblyInfo.cs
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.csproj.CoreCompileInputs.cache
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.sourcelink.json
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.dll
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\refint\HeladeriaManager.dll
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\HeladeriaManager.pdb
+d:\Christian\Documents\Programacion\00 UNLZ\z Otros\4 Cuatr\Programacion IV\TP\heladeria\heladeria\HeladeriaManager\obj\Release\net8.0\ref\HeladeriaManager.dll

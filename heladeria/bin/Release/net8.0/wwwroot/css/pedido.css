@@ -1,0 +1,86 @@
+﻿body {
+    background-color: #f4f3ee;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+}
+
+.container {
+    background-color: #f9f7f2;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1 {
+    color: #6a4e23;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+    .table th {
+        background-color: #6a4e23;
+        color: #fff;
+        font-weight: bold;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .table td {
+        padding: 12px;
+        text-align: center;
+        color: #4a4a4a;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f7f2;
+}
+
+.btn-primary {
+    background-color: #6a4e23;
+    border-color: #6a4e23;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+    .btn-primary:hover {
+        background-color: #5a3c1d;
+        border-color: #5a3c1d;
+    }
+
+
+.btn-outline-brown {
+    color: #a5734b;
+    border-color: #a5734b;
+    font-weight: 600;
+}
+
+    .btn-outline-brown:hover {
+        background-color: #a5734b;
+        color: white;
+    }
+
+.btn-outline-danger {
+    color: #c82333;
+    border-color: #c82333;
+    font-weight: 600;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #c82333;
+        color: white;
+    }
+

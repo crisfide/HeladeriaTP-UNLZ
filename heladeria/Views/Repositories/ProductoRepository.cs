@@ -26,7 +26,7 @@ namespace heladeria.Repositories
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Producto>("SELECT * FROM Grupo6.Helado").ToList();
+                return db.Query<Producto>("SELECT * FROM Helado").ToList();
             }
         }
 
@@ -34,7 +34,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Grupo6.Helado WHERE IdHelado = @Id", new { Id = id });
+                return db.QueryFirstOrDefault<Producto>("SELECT * FROM Helado WHERE IdHelado = @Id", new { Id = id });
             }
         }
 
@@ -42,7 +42,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Grupo6.Helado (Descripcion, Kilos, IdUsuarioAlta, FechaAlta) VALUES (@Descripcion, @Kilos, @IdUsuarioAlta, @FechaAlta)";
+                var sql = "INSERT INTO Helado (Descripcion, Kilos, IdUsuarioAlta, FechaAlta) VALUES (@Descripcion, @Kilos, @IdUsuarioAlta, @FechaAlta)";
                 db.Execute(sql, producto);
             }
         }
@@ -51,7 +51,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "UPDATE Grupo6.Helado SET Descripcion = @Descripcion, Kilos = @Kilos WHERE IdHelado = @IdHelado";
+                var sql = "UPDATE Helado SET Descripcion = @Descripcion, Kilos = @Kilos WHERE IdHelado = @IdHelado";
                 db.Execute(sql, producto);
             }
         }
@@ -60,7 +60,7 @@ namespace heladeria.Repositories
         {
             using (var db = new SqlConnection(connectionString))
             {
-                var sql = "DELETE FROM Grupo6.Helado WHERE IdHelado = @Id";
+                var sql = "DELETE FROM Helado WHERE IdHelado = @Id";
                 db.Execute(sql, new { Id = id });
             }
         }

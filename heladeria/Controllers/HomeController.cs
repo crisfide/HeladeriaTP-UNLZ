@@ -18,7 +18,7 @@ namespace heladeria.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy2()
         {
             return View();
         }

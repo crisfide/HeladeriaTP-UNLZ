@@ -71,12 +71,13 @@ namespace heladeria.Controllers
 
             PedidoVM pedidoVM = new PedidoVM();
             pedidoVM.pedido = null;
-            pedidoVM.listaSabores = new List<SelectListItem>();
+            /*pedidoVM.listaSabores = new List<SelectListItem>();
             var sabores = ProductoRepository.ObtenerTodos();
             foreach (var sabor in sabores)
             {
                 pedidoVM.listaSabores.Add(new SelectListItem { Value = sabor.IdHelado.ToString(), Text = sabor.Descripcion });
-            }
+            }*/
+            pedidoVM.listaSabores = new SelectList(ProductoRepository.ObtenerTodos(), "IdHelado", "Descripcion");
             return View(pedidoVM);
         }
 

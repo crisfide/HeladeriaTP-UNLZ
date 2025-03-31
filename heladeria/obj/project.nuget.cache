@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nbdaTMZH1d0=",
+  "dgSpecHash": "BT2PpDdtLKM=",
   "success": true,
-  "projectFilePath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\heladeria.csproj",
+  "projectFilePath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\z Otros\\4 Cuatr\\Programacion IV\\TP\\heladeria\\heladeria\\heladeria\\heladeria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Christian\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\Christian\\.nuget\\packages\\drapper\\1.1.0\\drapper.1.1.0.nupkg.sha512",

@@ -35,7 +35,7 @@ namespace heladeria.Repositories
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<PedidoCompleto>("SELECT * FROM Grupo6.Pedido WHERE IdUsuarioAlta = @Id", new { Id = idUsuario }).ToList();
+                return db.Query<PedidoCompleto>("SELECT * FROM Pedido WHERE IdUsuarioAlta = @Id", new { Id = idUsuario }).ToList();
             }
         }
 

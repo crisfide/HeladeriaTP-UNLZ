@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj",
+      "projectUniqueName": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\z Otros\\4 Cuatr\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj",
       "projectName": "HeladeriaManager",
-      "projectPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj",
+      "projectPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\z Otros\\4 Cuatr\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\HeladeriaManager.csproj",
       "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
-      "outputPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\obj\\",
+      "outputPath": "d:\\Christian\\Documents\\Programacion\\00 UNLZ\\z Otros\\4 Cuatr\\Programacion IV\\TP\\heladeria\\heladeria\\HeladeriaManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

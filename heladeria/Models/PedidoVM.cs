@@ -7,7 +7,7 @@ namespace heladeria.Models
     {
  
         public Pedido pedido{ get; set; }
-        public List<SelectListItem> listaSabores { get; set; }
+        public SelectList listaSabores { get; set; }
         
     }
 }
